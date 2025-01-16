@@ -4,18 +4,24 @@ This program is used to check netcdf files, their integrity and inspect their va
 
 ## Install
 
+~~~bash
 $ ./1.instal.bash
+~~~
 
-## Active enviroment
+## Activate environment
 
+~~~bash
 $ source .venvj/bin/activate
+~~~
 
-## Use
+## To use
 
+~~~bash
 $ python check_nc.py <file.nc> [--var <name_variable>] [--check]
 
---var <name_variable> 		: variable to be inspected
---check 			            : only checks file integrity
+--var <name_variable>     : variable to be inspected
+--check                   : only checks file integrity
+~~~
 
 ## Versions
 
