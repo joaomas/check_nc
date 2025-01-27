@@ -46,6 +46,22 @@ def listar_variaveis(caminho_arquivo, nome_variavel=None):
                 print(f"  Atributos: {var.ncattrs()}")
                 for attr in var.ncattrs():
                     print(f"    {attr}: {getattr(var, attr)}")
+                # Exibição de valores ajustada para diferentes dimensões
+                try:
+                    # Obtém a forma da variável
+                    shape = dataset.variables[nome_variavel].shape
+                    ndim = len(shape)  # Número de dimensões
+                    print("  Valores:")
+                    if ndim == 1:  # Variável 1D
+                        print(f"    Prévia 1D (5 primeiros valores): {dataset.variables[nome_variavel][:5]}")
+                    elif ndim == 2:  # Variável 2D
+                        print(f"    Prévia 2D (5x5):\n{dataset.variables[nome_variavel][:5, :5]}")
+                    elif ndim == 3:  # Variável 3D
+                        print(f"    Prévia 3D (5x5x5):\n{dataset.variables[nome_variavel][:5, :5, :5]}")
+                    else:  # Dimensões superiores
+                        print(f"    Prévia 4D > (5x5x5x5...):\n{dataset.variables[nome_variavel][:5, :5, :5, :5]}")
+                except Exception as e:
+                        print(f"  Não foi possível carregar os valores da variável: {e}")
             else:
                 print(f"A variável '{nome_variavel}' não existe no arquivo.")
         else:
