@@ -5,7 +5,7 @@ This program is used to check netcdf files, their integrity and inspect their va
 ## Install
 
 ~~~bash
-$ ./1.instal.bash
+$ ./install.bash
 ~~~
 
 ## Activate environment
