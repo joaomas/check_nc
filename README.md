@@ -27,5 +27,5 @@ $ python check_nc.py <file.nc> [--var <name_variable>] [--minmax] [--xarray] [--
 
 ## Versions
 
-0.2.0 - Add: '--minmax' flag for Min e Max values and '--xarray' for method using xarray import.
-0.1.0 - First version
+- 0.2.0 - Add: '--minmax' flag for Min e Max values and '--xarray' for method using xarray import.
+- 0.1.0 - First version
