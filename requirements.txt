@@ -1,3 +1,5 @@
 argparse
 basemap
 netCDF4
+xarray 
+h5py
